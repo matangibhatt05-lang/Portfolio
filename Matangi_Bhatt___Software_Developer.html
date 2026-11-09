@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Matangi Bhatt — Software Developer</title>
+<meta name="description" content="Portfolio of Matangi Bhatt, Software Developer: Laravel, FastAPI, React, AI and OCR.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--base:#0B0B12;--surface:#151522;--accent:#8B5CF6;--glow:#B69CFF;--text:#F5F3FF;--violet:#6D28D9;--electric:#9333EA;--lav:#C4B5FD;--muted:#A1A1AA;--border:#29283A;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box;margin:0}
+body{background:var(--base);color:var(--text);font:400 16px/1.7 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.logo{font-family:'Space Grotesk',Inter,sans-serif;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+#cv{position:fixed;inset:0;z-index:-1;width:100%;height:100%;background:radial-gradient(700px 450px at 12% 8%,#8b5cf630,transparent),radial-gradient(600px 450px at 92% 45%,#6d28d930,transparent),var(--base)}
+.cur{position:fixed;left:0;top:0;width:340px;height:340px;margin:-170px 0 0 -170px;border-radius:50%;background:radial-gradient(circle,#8b5cf61f,transparent 65%);pointer-events:none;z-index:0;transition:transform .15s ease-out}
+.prog{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--violet),var(--glow),var(--electric));z-index:50}
+.wrap{width:100%;max-width:none;margin:0;padding:0 clamp(22px,4vw,64px);position:relative;z-index:1}
+nav{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:40;display:flex;gap:4px;align-items:center;padding:8px 10px;border-radius:999px;background:#15152299;backdrop-filter:blur(14px);border:1px solid var(--border);max-width:calc(100% - 20px);overflow-x:auto;animation:drop .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes drop{from{opacity:0;transform:translate(-50%,-30px)}}
+nav a{padding:6px 14px;border-radius:999px;font-size:14px;color:var(--muted);white-space:nowrap;transition:.25s}
+nav a:hover{color:var(--text);background:#8b5cf630}
+.logo{font-weight:700;padding:6px 12px;color:var(--lav)}
+section{padding:90px 0;position:relative}
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:120px}
+.tag{display:inline-flex;gap:8px;align-items:center;padding:6px 14px;border:1px solid var(--border);border-radius:999px;font-size:13px;color:var(--lav);background:var(--surface)}
+.dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 10px #4ade80;animation:p 2s infinite}
+@keyframes p{50%{opacity:.3;transform:scale(1.4)}}
+.kicker{letter-spacing:.2em;font-size:13px;color:var(--muted);margin:26px 0 10px;min-height:24px}
+.caret{display:inline-block;width:2px;height:1em;background:var(--glow);margin-left:3px;vertical-align:-2px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+h1{font-size:clamp(40px,8vw,84px);line-height:1.04;font-weight:700}
+h1 .ch{display:inline-block;opacity:0;transform:translateY(60px) rotate(8deg);animation:ch .8s cubic-bezier(.2,.9,.2,1) forwards}
+@keyframes ch{to{opacity:1;transform:none}}
+.grad{background:linear-gradient(110deg,var(--lav),var(--accent),var(--electric),var(--lav));background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 6s linear infinite}
+@keyframes sh{to{background-position:-250% 0}}
+.lead{color:var(--muted);font-size:19px;max-width:580px;margin:22px 0 30px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-block;padding:13px 24px;border-radius:12px;font-weight:500;border:1px solid var(--border);background:var(--surface);transition:transform .2s,border-color .25s,box-shadow .25s;cursor:pointer;color:var(--text);font-size:15px;font-family:inherit}
+.btn:hover{border-color:var(--accent)}
+.btn.pri{background:linear-gradient(120deg,var(--violet),var(--accent),var(--electric));background-size:200% 100%;border:0;box-shadow:0 8px 30px #8b5cf655;animation:sh2 4s ease infinite}
+@keyframes sh2{50%{background-position:100% 0}}
+.btn.pri:hover{box-shadow:0 10px 44px #8b5cf6bb}
+.social{display:flex;gap:18px;margin-top:30px;color:var(--muted);font-size:14px;flex-wrap:wrap}
+.social a:hover{color:var(--glow)}
+.fl{position:absolute;padding:8px 16px;border-radius:14px;background:#15152299;backdrop-filter:blur(8px);border:1px solid var(--border);font-size:13px;color:var(--lav);animation:fl 6s ease-in-out infinite;box-shadow:0 10px 30px #0006}
+@keyframes fl{50%{transform:translateY(-22px) rotate(2deg)}}
+.fls{position:absolute;right:2%;top:21%;width:300px;height:420px}
+.orb{position:absolute;right:6%;top:50%;width:min(400px,40vw);aspect-ratio:1;border-radius:50%;background:conic-gradient(from 0deg,var(--violet),var(--glow),var(--accent),var(--violet));filter:blur(70px);opacity:.35;animation:spin 18s linear infinite;pointer-events:none}
+@keyframes spin{from{transform:translateY(-50%) rotate(0)}to{transform:translateY(-50%) rotate(360deg)}}
+.mq{overflow:hidden;border-block:1px solid var(--border);padding:16px 0;background:#15152266;-webkit-mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.mq div{display:flex;gap:44px;width:max-content;animation:mq 30s linear infinite;color:var(--muted);font-family:'Space Grotesk';font-size:18px}
+.mq:hover div{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.sh{margin-bottom:44px}
+.sh small{color:var(--accent);letter-spacing:.2em;font-size:12px;font-weight:500}
+.sh h2{font-size:clamp(30px,5vw,46px);margin-top:6px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.card{background:linear-gradient(160deg,#1b1b2e,var(--surface));border:1px solid var(--border);border-radius:20px;padding:26px;position:relative;overflow:hidden;transition:transform .25s ease-out,border-color .3s,box-shadow .3s;transform-style:preserve-3d;will-change:transform}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(320px circle at var(--x,50%) var(--y,0),#8b5cf62e,transparent 60%);opacity:0;transition:.3s;pointer-events:none}
+.card:hover{border-color:#8b5cf688;box-shadow:0 20px 50px #8b5cf626}
+.card:hover::before{opacity:1}
+.card>*{position:relative}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px}
+.badge{float:right;font-size:11px;letter-spacing:.08em;color:var(--glow);border:1px solid #8b5cf655;border-radius:999px;padding:2px 10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{font-size:12px;padding:4px 11px;border-radius:999px;background:#8b5cf61f;color:var(--lav);border:1px solid #8b5cf640;transition:.25s}
+.chip:hover{background:var(--accent);color:#fff;transform:translateY(-3px) scale(1.06)}
+.about{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:start}
+.about p{color:var(--muted);margin-bottom:14px}
+.about p b{color:var(--text);font-weight:500}
+.stat{font-size:42px;font-weight:700;font-family:'Space Grotesk'}
+.tl{position:relative;padding-left:30px;display:grid;gap:26px}
+.tl::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(var(--accent),var(--glow),transparent);transform-origin:top;animation:ln 2s ease both;animation-timeline:view();animation-range:entry 0% cover 60%}
+@keyframes ln{from{transform:scaleY(0)}}
+.tl .card::after{content:"";position:absolute;left:-39px;top:30px;width:15px;height:15px;border-radius:50%;background:var(--accent);border:3px solid var(--base);animation:pu 2.4s infinite}
+@keyframes pu{0%{box-shadow:0 0 0 0 #8b5cf6aa}100%{box-shadow:0 0 0 18px #8b5cf600}}
+.date{font-size:13px;color:var(--glow);margin-bottom:6px}
+ul.l{padding-left:18px;color:var(--muted);font-size:15px;margin-top:10px}
+ul.l li{margin-bottom:4px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.tab{padding:9px 18px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;font:inherit;font-size:14px;transition:.25s}
+.tab:hover{color:var(--text);border-color:var(--accent)}
+.tab.on{background:linear-gradient(120deg,var(--violet),var(--accent));color:#fff;border-color:transparent;box-shadow:0 6px 24px #8b5cf655}
+.pop{animation:pop .6s cubic-bezier(.2,.9,.2,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(30px) scale(.94)}}
+.sg{display:flex;flex-wrap:wrap;gap:8px}
+.sg .chip{animation:pop .5s both}
+.sk{grid-template-columns:repeat(4,1fr)}
+.sk>.rv{display:flex}
+.sk>.rv>.card{flex:1;width:100%;padding:22px}
+.sk .sg{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
+.sk .chip{display:flex;align-items:center;justify-content:center;text-align:center;min-height:54px;border-radius:12px;padding:6px 8px;font-size:12.5px;line-height:1.25;animation:pop .5s backwards}
+@media(max-width:1000px){.sk{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.sk{grid-template-columns:1fr}}
+.about p.goal{margin-top:18px;padding:18px 20px;border-radius:16px;border:1px solid #8b5cf655;background:linear-gradient(120deg,#6d28d933,#8b5cf61a);color:var(--text);box-shadow:0 10px 30px #8b5cf622}
+.tk{display:grid;gap:16px}
+.band{display:grid;grid-template-columns:210px 1fr;gap:22px;align-items:center;padding:20px;border:1px solid var(--border);border-radius:22px;background:linear-gradient(160deg,#1b1b2e,var(--surface));transition:.3s}
+.band:hover{border-color:#8b5cf688;box-shadow:0 18px 50px #8b5cf61f}
+.bl{display:flex;flex-direction:column;gap:4px}
+.bi{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:19px;font-weight:700;font-family:'Space Grotesk';background:linear-gradient(135deg,var(--violet),var(--accent));box-shadow:0 8px 24px #8b5cf655;margin-bottom:8px}
+.bl h3{font-size:18px;margin:0}
+.bl small{color:var(--muted);font-size:13px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:12px}
+.tile{aspect-ratio:1;border-radius:16px;border:1px solid var(--border);background:var(--base);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:8px;text-align:center;transition:transform .25s,border-color .25s,box-shadow .25s,background .25s;cursor:default}
+.rv:not(.in) .tile{opacity:0}
+.rv.in .tile{animation:pop .5s both}
+.tile b{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-family:'Space Grotesk';font-size:16px;color:var(--glow);background:#8b5cf61f;border:1px solid #8b5cf644;transition:.25s}
+.tile span{font-size:12px;line-height:1.25;color:var(--lav)}
+.tile:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 14px 34px #8b5cf640;background:#1b1b2e}
+.tile:hover b{background:linear-gradient(135deg,var(--violet),var(--accent));color:#fff}
+.et{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.etile{border-radius:16px;border:1px solid var(--border);background:var(--base);padding:16px;display:flex;align-items:center;gap:14px;transition:transform .25s,border-color .25s,box-shadow .25s,background .25s;cursor:default}
+.rv:not(.in) .etile{opacity:0}
+.rv.in .etile{animation:pop .5s both}
+.etile b{flex:none;width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-family:'Space Grotesk';font-size:13px;color:var(--glow);background:#8b5cf61f;border:1px solid #8b5cf644;transition:.25s}
+.etile div{min-width:0}
+.etile strong{display:block;font-weight:500;font-size:14px;line-height:1.35;color:var(--text)}
+.etile span{display:block;font-size:12px;line-height:1.35;color:var(--muted);margin-top:2px}
+.etile em{display:inline-block;font-style:normal;font-size:12px;color:var(--lav);margin-top:6px;padding:2px 10px;border-radius:999px;background:#8b5cf61f;border:1px solid #8b5cf640}
+.etile:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 14px 34px #8b5cf640;background:#1b1b2e}
+.etile:hover b{background:linear-gradient(135deg,var(--violet),var(--accent));color:#fff}
+.hire{position:relative;overflow:hidden;text-align:center;padding:56px 28px;border-radius:28px;border:1px solid #8b5cf655;background:radial-gradient(500px 260px at 50% 0,#8b5cf633,transparent),linear-gradient(160deg,#1b1b2e,var(--surface));box-shadow:0 30px 80px #8b5cf61f;margin-bottom:22px}
+.hire>*{position:relative}
+.hire h3{font-size:clamp(24px,4vw,38px);margin:20px auto 10px;max-width:640px;line-height:1.2}
+.hire p{color:var(--muted);margin-bottom:26px}
+.ring{position:absolute!important;left:50%;top:-120px;width:300px;height:300px;margin-left:-150px;border-radius:50%;border:1px solid #8b5cf666;animation:rg 4s ease-out infinite}
+@keyframes rg{from{transform:scale(.6);opacity:1}to{transform:scale(2.2);opacity:0}}
+.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.cc{display:flex;align-items:center;gap:14px;padding:18px 20px;border-radius:18px;border:1px solid var(--border);background:linear-gradient(160deg,#1b1b2e,var(--surface));transition:.3s}
+.cc:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 18px 44px #8b5cf63a}
+.ci{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-weight:700;font-family:'Space Grotesk';background:linear-gradient(135deg,var(--violet),var(--accent));box-shadow:0 8px 22px #8b5cf655}
+.cc div{min-width:0;flex:1}
+.cc small{display:block;color:var(--muted);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.cc b{display:block;font-weight:500;font-size:14px;overflow-wrap:anywhere}
+.ar{color:var(--glow);transition:.3s;font-style:normal}
+.cc:hover .ar{transform:translate(3px,-3px)}
+.loc{text-align:center;color:var(--muted);margin-top:24px}
+@media(max-width:760px){.band{grid-template-columns:1fr}.tiles{grid-template-columns:repeat(auto-fill,minmax(88px,1fr))}}
+form{display:grid;gap:12px}
+input,textarea{width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--border);background:var(--base);color:var(--text);font:inherit}
+input:focus,textarea:focus{outline:0;border-color:var(--accent);box-shadow:0 0 0 3px #8b5cf633}
+footer{border-top:1px solid var(--border);padding:28px 0;color:var(--muted);font-size:14px;text-align:center;position:relative;z-index:1}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:760px){.fls,.orb{display:none}.hero{padding-top:100px}.cur{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,h1 .ch{opacity:1;transform:none}.tl::before{transform:none}}
+</style>
+</head>
+<body>
+<canvas id="cv"></canvas>
+<div class="cur" id="cur"></div>
+<div class="prog" id="prog"></div>
+<div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js"></script>
+<script>
+const {useState,useEffect,useRef}=React;
+const html=htm.bind(React.createElement);
+
+/* ---------- global effects: particles, cursor glow, scroll progress ---------- */
+(function(){
+  const c=document.getElementById('cv'),x=c.getContext('2d');let W,H,P=[],m={x:-999,y:-999};
+  const rs=()=>{W=c.width=innerWidth;H=c.height=innerHeight;P=Array.from({length:Math.min(80,Math.floor(W/16))},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:Math.random()*1.6+.5}))};
+  rs();addEventListener('resize',rs);
+  const cur=document.getElementById('cur'),pg=document.getElementById('prog');
+  addEventListener('mousemove',e=>{m.x=e.clientX;m.y=e.clientY;cur.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)'});
+  addEventListener('scroll',()=>{pg.style.transform='scaleX('+(scrollY/(document.documentElement.scrollHeight-innerHeight||1))+')'},{passive:true});
+  (function f(){x.clearRect(0,0,W,H);
+    for(const p of P){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+      const dx=p.x-m.x,dy=p.y-m.y,d=Math.hypot(dx,dy);if(d<120){p.x+=dx/d*1.4;p.y+=dy/d*1.4}
+      x.fillStyle='rgba(182,156,255,.7)';x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill();}
+    for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const d=Math.hypot(P[i].x-P[j].x,P[i].y-P[j].y);if(d<110){x.strokeStyle='rgba(139,92,246,'+(.25*(1-d/110))+')';x.beginPath();x.moveTo(P[i].x,P[i].y);x.lineTo(P[j].x,P[j].y);x.stroke()}}
+    requestAnimationFrame(f)})();
+})();
+
+/* ---------- helpers ---------- */
+function useInView(){const r=useRef(),[v,s]=useState(false);useEffect(()=>{const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){s(true);o.disconnect()}},{threshold:.15});o.observe(r.current);return()=>o.disconnect()},[]);return[r,v]}
+function Reveal({children,className='',delay=0}){const [r,v]=useInView();return html`<div ref=${r} className=${'rv '+className+(v?' in':'')} style=${{transitionDelay:delay+'ms'}}>${children}</div>`}
+function Card({children,className='',style}){
+  const mv=e=>{const el=e.currentTarget,b=el.getBoundingClientRect(),px=(e.clientX-b.left)/b.width,py=(e.clientY-b.top)/b.height;
+    el.style.setProperty('--x',px*b.width+'px');el.style.setProperty('--y',py*b.height+'px');
+    el.style.transform='perspective(900px) rotateX('+((.5-py)*8)+'deg) rotateY('+((px-.5)*8)+'deg) translateY(-6px)'};
+  const lv=e=>{e.currentTarget.style.transform=''};
+  return html`<div className=${'card '+className} style=${style} onMouseMove=${mv} onMouseLeave=${lv}>${children}</div>`}
+function Magnetic({href,className,children}){
+  const mv=e=>{const b=e.currentTarget.getBoundingClientRect();e.currentTarget.style.transform='translate('+((e.clientX-b.left-b.width/2)*.25)+'px,'+((e.clientY-b.top-b.height/2)*.35)+'px)'};
+  return html`<a href=${href} className=${'btn '+className} onMouseMove=${mv} onMouseLeave=${e=>e.currentTarget.style.transform=''}>${children}</a>`}
+function Count({to,suffix=''}){
+  const [r,v]=useInView(),[n,setN]=useState(0);
+  useEffect(()=>{if(!v)return;let s=null;const f=t=>{s=s||t;const p=Math.min((t-s)/1400,1);setN(Math.round(to*(1-Math.pow(1-p,3))));if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)},[v]);
+  return html`<span ref=${r}>${n}${suffix}</span>`}
+function Head({k,t}){return html`<${Reveal} className="sh"><small>${k}</small><h2>${t}</h2><//>`}
+function Chips({items}){return html`<div className="chips">${items.map(i=>html`<span className="chip" key=${i}>${i}</span>`)}</div>`}
+function Typer({words}){
+  const [t,setT]=useState(''),i=useRef(0),d=useRef(false);
+  useEffect(()=>{let to;const f=()=>{const w=words[i.current%words.length];
+    setT(p=>d.current?w.slice(0,p.length-1):w.slice(0,p.length+1));
+    const cur=d.current?t.length-1:t.length+1;
+    if(!d.current&&cur>=w.length){d.current=true;to=setTimeout(f,1400)}
+    else if(d.current&&cur<=0){d.current=false;i.current++;to=setTimeout(f,300)}
+    else to=setTimeout(f,d.current?35:70)};
+    to=setTimeout(f,500);return()=>clearTimeout(to)});
+  return html`<span>${t}<i className="caret"></i></span>`}
+
+/* ---------- data ---------- */
+const nav=['About','Experience','Projects','Skills','Contact'];
+const ticker=['Laravel 12','FastAPI','React','Next.js','PHP','Python','MySQL','CodeIgniter 4','Gemini API','Surya OCR','Tesseract','Qwen 8B','Cloudflare','SendGrid','Docker','WordPress','Shopify','Arduino'];
+const exp=[
+ {d:'March 2026 – Nov 2026',t:'Backend Developer Intern',c:'InstaWeb Pvt. Ltd. · websites.co.in',b:['Building features for websites.co.in using PHP (Laravel 12), REST APIs and engaging front-end UI','Developing REST APIs tested with Postman; building dashboard components with Next.js','Managing MySQL databases with TablePlus for full-stack feature development','Working on domain functionality, the Customer Support Dashboard and Support Bot','Building social media configuration features that power multiple connected client features'],s:['Laravel 12','Next.js','MySQL','REST API']},
+ {d:'March 2024 – March 2026',t:'Software Developer Intern',c:'Ikshvaku Solutions Pvt. Ltd.',b:['Designed and deployed 7+ production websites (gaming, trade, wellness, jewellery, design) on WordPress and Shopify','Built REST APIs in FastAPI and backend modules in PHP (CodeIgniter 4); SQLite, SQLAlchemy, MySQL','Integrated OCR models (Surya OCR, Tesseract, Qwen 8B Instruct) for handwritten forms and scanned documents','Automated CAPTCHA capture with OCR on government portals (IIB Envoy, IRDAI Agency Portal)','Built an audit compliance PDF Q&A tool with Gemini API and Sentence Transformers','Integrated Gemini Free API, SendGrid and ScrapingDog API in live projects'],s:['FastAPI','CodeIgniter 4','OCR','WordPress','Shopify']}];
+const P=[
+ ['iw','Website Audit — Dashboard Analysis','Analyses a user’s full dashboard and website across three tabs: Issues Detected, Good To Have, and Fix Issues With Our Services.',['Laravel 12','MySQL','Next.js','REST API'],'InstaWeb'],
+ ['iw','Festival Offer — Admin Promotions','Admin dashboard to create festival-based offers and sales shown to all connected clients, with discounts to upgrade their plan.',['Laravel 12','MySQL','Admin Dashboard'],'InstaWeb'],
+ ['iw','Social Media Post — Multi-Platform','Create a post with optional caption and publish to X, LinkedIn, Pinterest, Facebook and Instagram with live preview, product posts and a social configuration.',['Laravel 12','Social APIs','Next.js'],'InstaWeb'],
+ ['iw','AI Auto Post — Scheduled Content','Generates 1–10 unique AI posts per business. Draft or schedule, calendar view, editable captions, live preview, and a job that auto-publishes on time.',['Laravel 12','Python','AI Prompting','Job Scheduling'],'InstaWeb'],
+ ['iw','Domain Management — Search, Buy & Manage','Cart-style domain search and purchase with Cloudflare. Dashboard for transfer, redirect, nameservers, DNS records, renewals and one-click primary domain.',['Laravel 12','Cloudflare','DNS','MySQL'],'InstaWeb'],
+ ['iw','WhatsApp — Automated Notifications','Automated WhatsApp messages for purchases, renewals and plan/trial expiry across 16 countries, with an admin configuration dashboard.',['Laravel','Next.js','WhatsApp API'],'InstaWeb'],
+ ['ik','Audit Compliance — PDF Q&A Tool','Upload a PDF and ask questions. Gemini API and Sentence Transformers return answers with the exact page number and phrase. Dockerised.',['Python','FastAPI','Gemini API','Docker'],'Internship'],
+ ['ik','OCR — Handwritten Forms & Govt Portals','Surya OCR, Tesseract and Qwen 8B Instruct to extract text from handwritten forms, plus CAPTCHA reading on two government portals.',['Python','Surya OCR','Tesseract','Qwen 8B'],'Internship'],
+ ['ik','SprintCart — E-Commerce Platform','Full-stack store with product listing, cart and checkout. Scalable FastAPI backend with SQLAlchemy and a React frontend.',['FastAPI','React','SQLAlchemy','MySQL'],'Local'],
+ ['ac','Care4Skin — AI Skincare Recommender','Skincare recommendations from user skin type using Gemini API, with SendGrid email integration.',['Python','FastAPI','Gemini API','SendGrid'],'Academic'],
+ ['ik','Production Websites — 7+ Live Sites','Client websites for gaming, trade, jewellery, wellness and design industries on WordPress and Shopify.',['yologaming.in','ittusa.in','dancedesign.in','wmarkglobal.com','justlovefinejewellery.com'],'Live'],
+ ['iot','Human Following Robot','Detects and follows a human with ultrasonic and infrared sensors, adjusting motor direction and speed in real time on Arduino.',['Arduino','Ultrasonic','IR Sensor','L298N'],'Academic'],
+ ['iot','Smart Blind Stick','Assistive stick that detects obstacles with an ultrasonic sensor and alerts the user via vibration motor and buzzer.',['Arduino','Vibration Motor','Buzzer'],'Academic'],
+ ['iot','Digital Door Lock System','Keypad PIN controls a servo lock, with wrong-attempt detection, alarm and LCD feedback on Arduino Uno.',['Arduino','4×4 Keypad','Servo','LCD'],'Academic']];
+const skills={'Programming':['Python','JavaScript','PHP','Java'],'Backend & APIs':['FastAPI','Node.js','CodeIgniter 4','Laravel 12'],'Frontend':['React','Next.js','HTML','CSS','Responsive UI'],'Database':['MySQL','SQLite','SQLAlchemy'],'AI & OCR':['Claude AI','ChatGPT','Gemini API','Surya OCR','Tesseract','Qwen 8B','Grok 4.6'],'APIs Used':['Gemini Free API','SendGrid','ScrapingDog','Social Media API','OpenRouter Image API'],'CMS':['WordPress','Shopify'],'Tools':['Git','Postman','Android Studio','Canva','Ideogram','MS Office','Cursor','TablePlus']};
+const icons={'Programming':'</>','Backend & APIs':'⚙️','Frontend':'🎨','Database':'🗄️','AI & OCR':'🤖','APIs Used':'🔌','CMS':'🌐','Tools':'🛠️'};
+
+/* ---------- sections ---------- */
+function Nav(){return html`<nav><span className="logo">MB.</span>${nav.map(l=>html`<a key=${l} href=${'#'+l.toLowerCase()}>${l}</a>`)}</nav>`}
+function Hero(){
+  const name='Matangi Bhatt.';
+  return html`<section className="hero" id="home"><div className="orb"></div>
+  <div className="fls">${['Laravel','FastAPI','React','Next.js','Gemini','OCR'].map((t,i)=>html`<span key=${t} className="fl" style=${{left:[10,150,60,200,0,170][i],top:[0,60,130,190,250,320][i],animationDelay:(i*.8)+'s'}}>${t}</span>`)}</div>
+  <div className="wrap">
+    <span className="tag"><i className="dot"></i> Open to Opportunities</span>
+    <div className="kicker"><${Typer} words=${['SOFTWARE DEVELOPER','BACKEND ENGINEER','AI & OCR BUILDER','LARAVEL · FASTAPI · REACT']}/></div>
+    <h1>${[...name].map((c,i)=>html`<span key=${i} className="ch" style=${{animationDelay:(.2+i*.045)+'s'}}>${c===' '?'\u00A0':c}</span>`)}<br/><span className="grad">Building ideas into digital experiences.</span></h1>
+    <p className="lead">2+ year building production web apps: Laravel, FastAPI, Next.js, AI and OCR. Creative engineering meets intelligent technology.</p>
+    <div className="row"><${Magnetic} href="#projects" className="pri">Explore Projects ↗<//><${Magnetic} href="#contact">Hire me<//></div>
+  </div></section>
+  <div className="mq"><div>${[...ticker,...ticker].map((t,i)=>html`<span key=${i}>✦ ${t}</span>`)}</div></div>`}
+function About(){
+  const st=[[2,'+','Year of experience'],[7,'+','Live websites deployed'],[14,'','Projects built'],[16,'','Countries on WhatsApp alerts']];
+  return html`<section id="about"><div className="wrap"><${Head} k="ABOUT ME" t="Problem solver, builder, learner"/>
+  <div className="about"><${Reveal}>
+    <p>Hi, I’m <b>Matangi Bhatt</b> — a Backend Developer passionate about building scalable web applications, developing intelligent solutions, and turning complex problems into practical digital experiences.</p>
+    <p>With <b>2+ years</b> of hands-on development experience, I specialize in PHP, Laravel, React, Python, MySQL, and REST API development. I have experience working on real-world projects, building backend systems, integrating third-party APIs, automating workflows, and developing AI-powered applications.</p>
+    <p>I enjoy exploring new technologies, solving challenging problems, and continuously improving my development skills. From designing robust backend architectures to creating interactive user experiences, I believe in writing clean, efficient, and maintainable code.</p>
+    <p>I’m always excited to work on innovative projects, collaborate with talented people, and build technology that makes a meaningful impact.</p>
+    <p className="goal"><b>My goal:</b> To create powerful digital solutions that combine functionality, performance, and innovation.</p>
+    
+    <//>
+    <div className="grid" style=${{gridTemplateColumns:'1fr 1fr'}}>${st.map(([n,s,l],i)=>html`<${Reveal} key=${l} delay=${i*100}><${Card}><div className="stat grad"><${Count} to=${n} suffix=${s}/></div><p>${l}</p><//><//>`)}</div>
+  </div></div></section>`}
+function Experience(){
+  return html`<section id="experience"><div className="wrap"><${Head} k="WORK EXPERIENCE" t="Where I’ve built things"/>
+  <div className="tl">${exp.map((e,i)=>html`<${Reveal} key=${e.t} delay=${i*120}><${Card}><div className="date">${e.d}</div><h3>${e.t}</h3><p style=${{color:'var(--lav)'}}>${e.c}</p>
+    <ul className="l">${e.b.map(b=>html`<li key=${b}>${b}</li>`)}</ul><${Chips} items=${e.s}/><//><//>`)}</div></div></section>`}
+function Projects(){
+  const [f,setF]=useState('all');
+  const T=[['all','All'],['iw','InstaWeb Work'],['ik','Ikshvaku Solutions Work'],['ac','Academic'],['iot','IoT']];
+  const L=P.filter(p=>f==='all'||p[0]===f);
+  return html`<section id="projects"><div className="wrap"><${Head} k="FEATURED PROJECTS" t="Things I’ve shipped"/>
+  <div className="tabs">${T.map(([k,l])=>html`<button key=${k} className=${'tab'+(f===k?' on':'')} onClick=${()=>setF(k)}>${l}</button>`)}</div>
+  <div className="grid" key=${f}>${L.map((p,i)=>html`<${Card} key=${p[1]} className="pop" style=${{animationDelay:i*60+'ms'}}><span className="badge">${p[4]}</span><h3>${p[1]}</h3><p>${p[2]}</p><${Chips} items=${p[3]}/><//>`)}</div></div></section>`}
+function Skills(){
+  return html`<section id="skills"><div className="wrap"><${Head} k="TECHNICAL SKILLS" t="My toolkit"/>
+  <div className="tk">${Object.entries(skills).map(([k,v],i)=>html`<${Reveal} key=${k} delay=${i*60}><div className="band"><div className="bl"><span className="bi">${icons[k]}</span><h3>${k}</h3><small>${v.length} skills</small></div><div className="tiles">${v.map((s,j)=>html`<div key=${s} className="tile" style=${{animationDelay:(j*60)+'ms'}}><b>${s.replace(/[^A-Za-z0-9]/g,'').slice(0,2)}</b><span>${s}</span></div>`)}</div></div><//>`)}</div></div></section>`}
+function More(){
+  const edu=[['BCA','BCA — Bachelor of Computer Applications','Shri M.D Shah Mahila College, Adarsh Education Society','Graduation 2026'],['HSC','HSC (12th)','Maharashtra State Board','60.67%'],['SSC','SSC (10th)','Maharashtra State Board','71.40%']];
+  const langs=[['En','English','Professional'],['Hi','Hindi','Native'],['Gu','Gujarati','Native']];
+  return html`<section><div className="wrap"><${Head} k="EDUCATION & LANGUAGES" t="Learning & communication"/>
+  <div className="tk">
+    <${Reveal}><div className="band"><div className="bl"><span className="bi">🎓</span><h3>Education</h3><small>${edu.length} qualifications</small></div><div className="et">${edu.map(([b,t,s,m],j)=>html`<div key=${t} className="etile" style=${{animationDelay:(j*60)+'ms'}}><b>${b}</b><div><strong>${t}</strong><span>${s}</span><em>${m}</em></div></div>`)}</div></div><//>
+    <${Reveal} delay=${100}><div className="band"><div className="bl"><span className="bi">🗣️</span><h3>Languages</h3><small>${langs.length} languages</small></div><div className="tiles">${langs.map(([b,n,l],j)=>html`<div key=${n} className="tile" style=${{animationDelay:(j*60)+'ms'}}><b>${b}</b><span>${n}<br/>${l}</span></div>`)}</div></div><//>
+  </div></div></section>`}
+function Contact(){
+  return html`<section id="contact"><div className="wrap"><${Head} k="CONTACT" t="Let’s build something together"/>
+  <${Reveal}><div className="hire"><div className="ring"></div><span className="tag"><i className="dot"></i> Available for work</span>
+    <h3>Want to hire me? Please contact or email me.</h3><p>I’m waiting for your response. Let’s talk about your next project.</p>
+    <div className="row" style=${{justifyContent:'center'}}><${Magnetic} href="mailto:matangibhatt05@gmail.com" className="pri">Email me ↗<//><${Magnetic} href="tel:7738348605" className="">Call me<//></div></div><//>
+  <div className="cg">${[['✉️','Email','matangibhatt05@gmail.com','mailto:matangibhatt05@gmail.com'],['📞','Phone','7738348605','tel:7738348605'],['in','LinkedIn','linkedin.com/in/matangibhatt','https://linkedin.com/in/matangibhatt'],['</>','GitHub','github.com/matangibhatt05-lang','https://github.com/matangibhatt05-lang']].map(([i,t,v,h],k)=>html`<${Reveal} key=${t} delay=${k*90}><a className="cc" href=${h} target=${h.startsWith('http')?'_blank':undefined} rel="noopener"><span className="ci">${i}</span><div><small>${t}</small><b>${v}</b></div><i className="ar">↗</i></a><//>`)}</div>
+  <${Reveal}><p className="loc">📍 Vasai (E), Maharashtra</p><//>
+  </div></section>`}
+function App(){return html`<${Nav}/><${Hero}/><${About}/><${Experience}/><${Projects}/><${Skills}/><${More}/><${Contact}/><footer>© 2026 Matangi Bhatt · Built with React</footer>`}
+ReactDOM.createRoot(document.getElementById('root')).render(html`<${App}/>`);
+</script>
+</body>
+</html>
